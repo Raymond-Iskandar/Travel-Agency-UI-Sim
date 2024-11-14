@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" styleClass="background" prefHeight="300.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Destinations.ModifyDestinationsController">
+           
+<ImageView fitWidth="600" preserveRatio="true">
+    <Image url="/image/destination.png"/>
+</ImageView>
+
+<Separator/>
+    <Label text="Remove a Destination"/>
+<Separator/>
+
+<GridPane alignment = "CENTER" vgap="10">
+
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="nameTf" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Country:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="countryTf" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+</GridPane>
+
+    <HBox alignment="CENTER" fillHeight="true">
+        <Button fx:id="button" text="Remove Destination" onAction="#removeDestination" prefWidth="600" />
+        <Button text="Close" onAction="#handleClose" prefWidth="600"/>
+    </HBox>
+
+<stylesheets>
+    <URL value="@../style.css"/>
+</stylesheets>
+
+</VBox>

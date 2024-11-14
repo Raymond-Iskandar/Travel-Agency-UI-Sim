@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox alignment="CENTER" styleClass="background" prefHeight="420.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Flights.ModifyFlightsController">
+    
+    <ImageView fitWidth="600" preserveRatio="true">
+    <Image url="/image/flight.png"/>
+    </ImageView>
+    
+    <Separator/>
+    <Label text="Add a Flight"/>
+    <Separator/>
+
+    <GridPane alignment = "CENTER" vgap="10">
+
+        <Label text="Airline:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="airlineTf" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Flight Number:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="flightNoTf" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        
+        <Label text="Takeoff:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="takeOffTf" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Landing:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="landingTf" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Cost:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="costTf" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        </GridPane>
+
+    <HBox alignment="CENTER" fillHeight="true">
+        <Button fx:id="addButton" text="Add Flight" onAction="#addFlight" prefWidth="300" />
+        <Button text="Close" onAction="#handleClose" prefWidth="300"/>
+    </HBox>
+
+    <stylesheets>
+    <URL value="@../style.css"/>
+    </stylesheets>
+</VBox>
